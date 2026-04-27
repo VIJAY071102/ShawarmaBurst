@@ -3,7 +3,6 @@ import React from "react";
 function Franchise() {
   return (
     <div className="bg-gray-100 text-black">
-      {/* 🔥 HERO */}
       <div className="bg-black text-white py-20 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold">
           Build Your Future with Shawarma Burst 🚀
@@ -13,13 +12,18 @@ function Franchise() {
         </p>
       </div>
 
-      {/* 📸 IMAGES */}
       <div className="max-w-6xl mx-auto py-10 grid md:grid-cols-2 gap-6 px-4">
-        <img src="/photo1.webp" className="rounded-lg shadow-md" />
-        <img src="/photo2.webp" className="rounded-lg shadow-md" />
-      </div>
+  <img
+    src="/photo1.webp"
+    className="w-full h-64 object-cover rounded-lg shadow-md"
+  />
+  <img
+    src="/photo8.jpeg"
+    className="w-full h-64 object-cover rounded-lg shadow-md"
+  />
+</div>
 
-      {/* 🧾 STORY */}
+  
       <div className="max-w-5xl mx-auto py-12 px-4 text-center">
         <h2 className="text-2xl font-bold mb-4 text-black">Our Journey</h2>
         <p className="text-gray-600 leading-relaxed">
@@ -29,7 +33,6 @@ function Franchise() {
         </p>
       </div>
 
-      {/* 💼 BENEFITS */}
       <div className="max-w-6xl mx-auto py-10 px-4">
         <h2 className="text-2xl font-bold text-center mb-8 text-black">
           Why Partner With Us?
@@ -54,7 +57,6 @@ function Franchise() {
         </div>
       </div>
 
-      {/* 📈 GROWTH */}
       <div className="bg-white py-12 text-center px-4">
         <h2 className="text-2xl font-bold text-black mb-4">Our Vision</h2>
         <p className="text-gray-600 max-w-3xl mx-auto">
@@ -64,7 +66,6 @@ function Franchise() {
         </p>
       </div>
 
-      {/* 💰 INVESTMENT */}
       <div className="bg-yellow-400 py-12 text-center px-4">
         <h2 className="text-2xl font-bold text-black">Investment & Setup</h2>
         <p className="mt-3">Affordable startup model</p>
@@ -72,7 +73,6 @@ function Franchise() {
         <p className="mt-1">100–200 sq.ft space required</p>
       </div>
 
-      {/* 📞 CTA */}
       <div className="py-12 text-center bg-gray-100">
         <h2 className="text-xl font-semibold mb-4 text-black">
           Ready to Start Your Business?

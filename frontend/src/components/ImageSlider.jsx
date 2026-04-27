@@ -31,19 +31,20 @@ function ImageSlider() {
         ))}
       </Swiper>
 
-      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10">
-        <h1 className="text-white text-4xl md:text-6xl font-bold">
+      <div className="absolute inset-0 flex flex-col items-center justify-center text-center z-10 px-4">
+        <h1 className="text-white text-4xl md:text-6xl font-bold drop-shadow-lg">
           Welcome To
         </h1>
-        <h1 className="text-yellow-400 text-4xl md:text-6xl font-bold">
+
+        <h1 className="text-yellow-400 text-4xl md:text-6xl font-bold drop-shadow-lg">
           Shawarma Burst
         </h1>
 
-        <p className="text-red-600 mt-3 text-lg md:text-xl">
+        <p className="text-gray-200 mt-3 text-lg md:text-xl max-w-md">
           Flavor Explosion in Every Bite
         </p>
 
-        <button className="mt-5 bg-yellow-400 text-black px-6 py-2 rounded-full font-semibold hover:bg-yellow-300 transition">
+        <button className="mt-6 bg-yellow-400 text-black px-8 py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-lg hover:scale-105">
           Order Now
         </button>
       </div>

@@ -5,18 +5,19 @@ import Footer from "../components/Footer";
 
 function MainLayout() {
   return (
-    <div className="h-screen flex flex-col overflow-hidden">
-      <div className="h-24 shrink-0">
+    <div className="min-h-screen flex flex-col">
+      {/* Sticky Navbar */}
+      <div className="sticky top-0 z-50">
         <Navbar />
       </div>
 
-      <div className="flex-1 overflow-y-auto">
+      {/* Page Content */}
+      <div className="flex-1">
         <Outlet />
       </div>
 
-      <div className="shrink-0">
-        <Footer />
-      </div>
+      {/* Normal Footer */}
+      <Footer />
     </div>
   );
 }

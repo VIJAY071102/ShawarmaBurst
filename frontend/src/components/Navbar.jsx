@@ -1,60 +1,69 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const linkClass = ({ isActive }) =>
+    isActive ? "text-yellow-400" : "text-white";
+
   return (
-    <div className="bg-black text-white p-4 h-24 flex items-center justify-center gap-10">
-      {/* Logo */}
-      <div>
-        <img src="/logo.png" alt="logo" className="h-18" />
+    <nav className="bg-black text-white">
+      <div className="flex items-center justify-between px-4 h-20">
+        <img src="/logo.png" alt="logo" className="h-14" />
+
+        <ul className="hidden md:flex gap-6 items-center">
+          <NavLink to="/" end className={linkClass}>
+            <li>Home</li>
+          </NavLink>
+          {/* <NavLink to="/about" className={linkClass}>
+            <li>About</li>
+          </NavLink> */}
+          <NavLink to="/menu" className={linkClass}>
+            <li>Menu</li>
+          </NavLink>
+          <NavLink to="/franchise" className={linkClass}>
+            <li>Franchise</li>
+          </NavLink>
+          <NavLink to="/gallery" className={linkClass}>
+            <li>Gallery</li>
+          </NavLink>
+          <NavLink to="/contact" className={linkClass}>
+            <li>Contact</li>
+          </NavLink>
+        </ul>
+
+        <button
+          className="md:hidden text-2xl"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          ☰
+        </button>
       </div>
 
-      {/* Menu */}
-      <ul className="flex items-center justify-center gap-6">
-        <NavLink
-          to="/"
-          end
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>Home</li>
-        </NavLink>
-
-        <NavLink
-          to="/about"
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>About</li>
-        </NavLink>
-
-        <NavLink
-          to="/menu"
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>Menu</li>
-        </NavLink>
-
-        <NavLink
-          to="/franchise"
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>Franchise</li>
-        </NavLink>
-
-        <NavLink
-          to="/gallery"
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>Gallery</li>
-        </NavLink>
-
-        <NavLink
-          to="/contact"
-          className={({ isActive }) => (isActive ? "text-yellow-400" : "")}
-        >
-          <li>Contact</li>
-        </NavLink>
-      </ul>
-    </div>
+      {isOpen && (
+        <ul className="flex flex-col items-center gap-4 pb-4 md:hidden">
+          <NavLink to="/" end className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>Home</li>
+          </NavLink>
+          {/* <NavLink to="/about" className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>About</li>
+          </NavLink> */}
+          <NavLink to="/menu" className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>Menu</li>
+          </NavLink>
+          <NavLink to="/franchise" className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>Franchise</li>
+          </NavLink>
+          <NavLink to="/gallery" className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>Gallery</li>
+          </NavLink>
+          <NavLink to="/contact" className={linkClass} onClick={() => setIsOpen(false)}>
+            <li>Contact</li>
+          </NavLink>
+        </ul>
+      )}
+    </nav>
   );
 }
 

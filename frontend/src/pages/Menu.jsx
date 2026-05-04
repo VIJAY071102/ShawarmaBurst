@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import menuData from "../data/menuData";
-import menuBg from "../assets/menu-bg.png";
 
 function Menu() {
   const [activeCategory, setActiveCategory] = useState("all");
 
-  // 🔥 Flatten data
   const allItems = menuData.flatMap((cat) =>
     cat.items.map((item, index) => ({
       id: cat.category + index,
@@ -16,79 +14,66 @@ function Menu() {
         item.price ||
         (item.prices ? `Starts from ₹${Object.values(item.prices)[0]}` : ""),
       image: "/images/default.jpg",
-    })),
+    }))
   );
 
-  // 🔘 Categories
   const categories = ["all", ...menuData.map((cat) => cat.category)];
 
-  // 🔍 Filter items
   const filteredItems =
     activeCategory === "all"
       ? allItems
       : allItems.filter((item) => item.category === activeCategory);
 
   return (
-    <div
-      className="min-h-screen py-10 px-6 bg-fixed bg-center bg-cover relative"
-      style={{
-        backgroundImage: `url(${menuBg})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
-      {/* Overlay (darker so background is visible properly) */}
-      <div className="absolute inset-0 bg-black/30"></div>
+    <div className="min-h-screen py-8 px-3 sm:px-6 bg-gray-100">
+      
+      <h1 className="text-2xl sm:text-3xl md:text-5xl font-bold text-center mb-6 sm:mb-8 text-black">
+        Our Menu
+      </h1>
 
-      {/* Content */}
-      <div className="relative z-10">
-        <h1 className="text-3xl md:text-5xl font-bold text-center mb-8 text-white">
-          Our Menu
-        </h1>
+      <div className="flex flex-wrap justify-center gap-2 sm:gap-4 mb-6 sm:mb-10 max-w-4xl mx-auto">
+        {categories.map((cat) => (
+          <button
+            key={cat}
+            onClick={() => setActiveCategory(cat)}
+            className={`px-3 sm:px-5 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm capitalize font-medium transition ${
+              activeCategory === cat
+                ? "bg-yellow-400 text-black shadow"
+                : "bg-white text-black border hover:bg-yellow-100"
+            }`}
+          >
+            {cat}
+          </button>
+        ))}
+      </div>
 
-        {/* Category Filter */}
-        <div className="flex flex-wrap justify-center gap-4 mb-10">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveCategory(cat)}
-              className={`px-5 py-2 rounded-full capitalize font-medium transition ${
-                activeCategory === cat
-                  ? "bg-yellow-400 text-black"
-                  : "bg-white text-black border hover:bg-yellow-100"
-              }`}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+      <div className="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-6">
+        {filteredItems.map((item) => (
+          <div
+            key={item.id}
+            className="bg-white rounded-lg shadow-md overflow-hidden hover:shadow-lg transition duration-300"
+          >
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-32 sm:h-40 md:h-48 object-cover"
+            />
 
-        {/* Menu Grid */}
-        <div className="max-w-6xl mx-auto grid sm:grid-cols-2 md:grid-cols-3 gap-8">
-          {filteredItems.map((item) => (
-            <div
-              key={item.id}
-              className="bg-white/90 backdrop-blur-md rounded-xl shadow-md overflow-hidden hover:shadow-xl hover:scale-105 transition duration-300"
-            >
-              <img
-                src={item.image}
-                alt={item.name}
-                className="w-full h-48 object-cover"
-              />
+            <div className="p-3 sm:p-4">
+              <h2 className="text-sm sm:text-base font-semibold text-black">
+                {item.name}
+              </h2>
 
-              <div className="p-4">
-                <h2 className="text-lg font-semibold text-black">
-                  {item.name}
-                </h2>
+              <p className="text-xs sm:text-sm text-gray-600 mt-1 line-clamp-2">
+                {item.description}
+              </p>
 
-                <p className="text-sm text-gray-600 mt-1">{item.description}</p>
-
-                <p className="mt-3 font-bold text-yellow-500">{item.price}</p>
-              </div>
+              <p className="mt-2 sm:mt-3 font-bold text-yellow-500 text-sm sm:text-base">
+                {item.price}
+              </p>
             </div>
-          ))}
-        </div>
+          </div>
+        ))}
       </div>
     </div>
   );

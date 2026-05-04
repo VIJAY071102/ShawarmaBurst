@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Contact() {
-  const phoneNumber = "919347045830"; // 🔁 your number
+  const phoneNumber = "917353323300"; 
 
   const [form, setForm] = useState({
     name: "",
@@ -23,7 +23,6 @@ function Contact() {
 
   return (
     <>
-      {/* 🔥 CTA SECTION */}
       <div className="bg-yellow-400 py-12 px-4 text-center">
         <h1 className="text-2xl md:text-4xl font-bold text-black">
           Looking For A Food Franchise Business?
@@ -46,10 +45,8 @@ function Contact() {
         </a>
       </div>
 
-      {/* 📍 MAP + FORM SECTION */}
       <div className="py-12 px-4 md:px-10 bg-gray-100">
         <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
-          {/* 📍 MAP */}
           <div className="w-full h-[400px] shadow-lg rounded-lg overflow-hidden">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3889.239496404272!2d77.6302811102798!3d12.892315716559825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15cc4fbcc57d%3A0x62c12657fce3d0f4!2sshawarma%20burst!5e0!3m2!1sen!2sin!4v1777211466655!5m2!1sen!2sin"
@@ -59,7 +56,6 @@ function Contact() {
             ></iframe>
           </div>
 
-          {/* 📝 FORM */}
           <div className="bg-white p-6 rounded-lg shadow-lg">
             <h2 className="text-2xl font-bold mb-4">Contact Us</h2>
 

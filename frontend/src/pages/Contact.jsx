@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 function Contact() {
-  const phoneNumber = "917353323300"; 
+  const phoneNumber = "919353522108"; 
 
   const [form, setForm] = useState({
     name: "",

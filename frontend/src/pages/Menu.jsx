@@ -13,7 +13,7 @@ function Menu() {
       price:
         item.price ||
         (item.prices ? `Starts from ₹${Object.values(item.prices)[0]}` : ""),
-      image: "/images/default.jpg",
+      image: item.image,
     }))
   );
 

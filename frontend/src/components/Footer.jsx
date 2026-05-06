@@ -17,7 +17,7 @@ function Footer() {
           </p>
 
           <div className="mt-4 text-sm space-y-1">
-            <p>📞 +91 7353323300</p>
+            <p>📞 +91 9353522108</p>
             <p>✉️ shawarmaburst@gmail.com</p>
           </div>
         </div>

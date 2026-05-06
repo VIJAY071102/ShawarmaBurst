@@ -1,7 +1,7 @@
 import React from "react";
 import { FaWhatsapp, FaPhoneAlt } from "react-icons/fa";
 function FloatingButtons() {
-  const phoneNumber = "917353323300"; 
+  const phoneNumber = "919353522108"; 
   const message = "Hello I would like to inquire about your Franchise";
 
   const whatsappLink = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(

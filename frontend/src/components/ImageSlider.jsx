@@ -15,8 +15,8 @@ function ImageSlider() {
   ];
 
   return (
-    <div className="relative w-full h-[300px] sm:h-[400px] md:h-[550px] lg:h-[650px]">
-      
+    <div className="relative w-full h-[300px] sm:h-[450px] md:h-[600px] lg:h-[700px]">
+
       {/* Slider */}
       <Swiper
         modules={[Autoplay, EffectFade]}
@@ -36,27 +36,30 @@ function ImageSlider() {
         ))}
       </Swiper>
 
-      {/* Strong Overlay */}
-      <div className="absolute inset-0 bg-black/70 z-0"></div>
+      {/* 🔥 Red Overlay (instead of plain black) */}
+      <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-red-900/70 to-black/80 z-0"></div>
 
       {/* Content */}
       <div className="absolute inset-0 flex items-center justify-center z-10 px-4">
-        
-        <div className=" px-6 py-4 rounded-xl text-center">
-          
-          <h1 className="text-white text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-wide">
+
+        <div className="px-6 py-4 rounded-xl text-center">
+
+          {/* Bigger + White */}
+          <h1 className="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-wide drop-shadow-lg">
             Welcome To
           </h1>
 
-          <h1 className="text-yellow-300 text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-extrabold tracking-wide">
+          {/* 🔥 Red Brand Name */}
+          <h1 className="text-red-500 text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-extrabold tracking-wider mt-2 ">
             Shawarma Burst
           </h1>
 
-          <p className="text-gray-100 mt-2 sm:mt-3 text-sm sm:text-base md:text-lg max-w-xs sm:max-w-md mx-auto">
+          <p className="text-gray-200 mt-3 text-base sm:text-lg md:text-xl max-w-md mx-auto">
             Flavor Explosion in Every Bite
           </p>
 
-          <button className="mt-4 sm:mt-6 bg-yellow-400 text-black px-5 sm:px-6 md:px-8 py-2 sm:py-3 rounded-full font-semibold hover:bg-yellow-300 transition shadow-lg hover:scale-105 text-sm sm:text-base">
+          {/* 🔴 Button upgraded */}
+          <button className="mt-6 bg-red-500 text-white px-6 sm:px-8 py-3 rounded-full font-semibold hover:bg-red-600 transition shadow-lg hover:scale-105 text-base sm:text-lg">
             Order Now
           </button>
 

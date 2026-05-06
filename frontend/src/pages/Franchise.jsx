@@ -2,33 +2,33 @@ import React from "react";
 
 function Franchise() {
   return (
-    <div className="bg-gray-100 text-black">
+    <div className="bg-gray-50 text-black">
 
-      {/* Hero */}
+      {/* HERO (keep black for contrast) */}
       <div className="bg-black text-white py-20 text-center px-4">
         <h1 className="text-3xl md:text-5xl font-bold">
-          Build Your Future with Shawarma Burst 🚀
+          Start Your Own Profitable Shawarma Business 🚀
         </h1>
         <p className="mt-4 text-gray-400 max-w-2xl mx-auto">
-          Start your own food business with a proven concept and growing demand.
+          Low investment. High demand. Fast returns. Build your future with a growing brand.
         </p>
       </div>
 
-      {/* Images */}
-     <div className="max-w-6xl mx-auto py-10 grid md:grid-cols-2 gap-6 px-4">
-  <img
-    src="/photo1.webp"
-    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
-  />
-  <img
-    src="/photo8.jpeg"
-    className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
-  />
-</div>
+      {/* IMAGES */}
+      <div className="max-w-6xl mx-auto py-10 grid md:grid-cols-2 gap-6 px-4">
+        <img
+          src="/photo1.webp"
+          className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
+        />
+        <img
+          src="/photo8.jpeg"
+          className="w-full h-64 md:h-80 object-cover rounded-lg shadow-md"
+        />
+      </div>
 
-      {/* WHY CHOOSE US (STRONG SECTION) */}
-      <div className="max-w-6xl mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8">
+      {/* WHY CHOOSE US */}
+      <div className="max-w-6xl mx-auto py-12 px-4 bg-white rounded-xl shadow-sm">
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">
           Why Choose Shawarma Burst?
         </h2>
 
@@ -39,7 +39,79 @@ function Franchise() {
             "⚡ Fast ROI",
             "📍 Easy Setup",
           ].map((item, i) => (
-            <div key={i} className="bg-white p-5 rounded-xl shadow border">
+            <div key={i} className="bg-gray-50 p-5 rounded-xl shadow border">
+              {item}
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* WHY SHAWARMA BURST */}
+      <div className="bg-gradient-to-r from-red-50 to-white py-16 px-4 mt-10">
+        <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+          Why Shawarma Burst Over Others?
+        </h2>
+
+        <div className="max-w-5xl mx-auto grid md:grid-cols-2 gap-8 text-gray-700">
+          <div className="space-y-5">
+            <p>🚀 Faster break-even compared to other franchises</p>
+            <p>💰 Start with just ₹3–6 Lakhs (others need ₹10L+)</p>
+            <p>🔥 High-demand food with consistent daily sales</p>
+          </div>
+
+          <div className="space-y-5">
+            <p>🤝 Full support from setup to operations</p>
+            <p>📦 Complete ready-to-run setup provided</p>
+            <p>📈 Growing brand with increasing trust</p>
+          </div>
+        </div>
+
+        <p className="text-center mt-8 text-gray-600 max-w-xl mx-auto">
+          This is not just a food outlet — it’s a scalable business opportunity.
+        </p>
+      </div>
+
+      {/* INVESTMENT */}
+      <div className="bg-gray-50 py-12 text-center px-4">
+        <h2 className="text-2xl font-bold text-gray-800">
+          Investment Models
+        </h2>
+
+        <div className="mt-6 grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+          <div className="bg-white p-6 rounded-xl shadow border">
+            <h3 className="text-xl font-bold text-red-500">Kiosk Model</h3>
+            <p className="text-2xl font-bold mt-2">₹3 – ₹4 Lakhs</p>
+            <p className="text-gray-600 mt-2 text-sm">
+              Best for small spaces & high footfall areas
+            </p>
+          </div>
+
+          <div className="bg-white p-6 rounded-xl shadow border">
+            <h3 className="text-xl font-bold text-red-500">Cafe Model</h3>
+            <p className="text-2xl font-bold mt-2">₹6 Lakhs</p>
+            <p className="text-gray-600 mt-2 text-sm">
+              Ideal for dine-in & premium locations
+            </p>
+          </div>
+        </div>
+      </div>
+
+      {/* WHAT WE PROVIDE */}
+      <div className="bg-white py-12 px-4">
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">
+          What We Provide
+        </h2>
+
+        <div className="grid grid-cols-2 md:grid-cols-3 gap-6 max-w-5xl mx-auto text-center">
+          {[
+            "🤝 Full Support",
+            "👨‍🍳 Trained Staff",
+            "📦 Operating Materials",
+            "🏗️ Total Setup",
+            "🎯 Branding",
+            "🌐 Online Setup",
+          ].map((item, i) => (
+            <div key={i} className="bg-gray-50 p-5 rounded-xl shadow border">
               {item}
             </div>
           ))}
@@ -47,108 +119,78 @@ function Franchise() {
       </div>
 
       {/* PROFIT POTENTIAL */}
-      <div className="bg-white py-12 text-center px-4">
-        <h2 className="text-2xl font-bold mb-4">Profit Potential</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
-          With high-demand menu items and efficient operations, our partners
-          typically achieve strong daily sales and fast break-even timelines.
-        </p>
+      <div className="bg-red-50 py-12 text-center px-4">
+        <h2 className="text-2xl font-bold mb-4 text-gray-800">
+          Profit Potential
+        </h2>
 
         <div className="mt-6 grid grid-cols-2 md:grid-cols-3 gap-4 max-w-4xl mx-auto">
-          <div className="bg-gray-100 p-4 rounded-lg">
+          <div className="bg-white p-4 rounded-lg shadow">
             <p className="font-bold text-lg">₹8K–₹15K</p>
-            <p className="text-sm text-gray-600">Daily Sales Potential</p>
+            <p className="text-sm text-gray-600">Daily Sales</p>
           </div>
-          <div className="bg-gray-100 p-4 rounded-lg">
+
+          <div className="bg-white p-4 rounded-lg shadow">
             <p className="font-bold text-lg">3–6 Months</p>
-            <p className="text-sm text-gray-600">Break-even Time</p>
+            <p className="text-sm text-gray-600">Break-even</p>
           </div>
-          <div className="bg-gray-100 p-4 rounded-lg">
+
+          <div className="bg-white p-4 rounded-lg shadow">
             <p className="font-bold text-lg">High Margins</p>
-            <p className="text-sm text-gray-600">On Core Items</p>
+            <p className="text-sm text-gray-600">Core Items</p>
           </div>
         </div>
       </div>
 
-      {/* PROCESS */}
-      <div className="max-w-6xl mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold text-center mb-8">
-          How It Works
+      {/* TESTIMONIALS */}
+      <div className="bg-gray-50 py-12 px-4">
+        <h2 className="text-2xl font-bold text-center mb-8 text-gray-800">
+          Partner Success Stories
         </h2>
 
-        <div className="grid md:grid-cols-4 gap-6 text-center">
+        <div className="grid md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {[
-            "1. Enquire",
-            "2. Discussion",
-            "3. Setup",
-            "4. Launch 🚀",
-          ].map((step, i) => (
+            {
+              text: "Started with kiosk, now running 2 outlets.",
+              name: "Ravi Kumar",
+            },
+            {
+              text: "Low investment and quick returns.",
+              name: "Arun",
+            },
+            {
+              text: "Online orders boosted my sales quickly.",
+              name: "Suresh",
+            },
+          ].map((item, i) => (
             <div key={i} className="bg-white p-5 rounded-xl shadow border">
-              {step}
+              <p className="italic text-gray-600">"{item.text}"</p>
+              <p className="mt-3 font-semibold">– {item.name}</p>
             </div>
           ))}
         </div>
       </div>
 
-      {/* TESTIMONIAL */}
-      <div className="bg-white py-12 text-center px-4">
-        <h2 className="text-2xl font-bold mb-4">Partner Success</h2>
-        <p className="text-gray-600 max-w-2xl mx-auto italic">
-          "Joining Shawarma Burst was the best decision. The support and brand
-          value helped me reach profitability within 4 months."
-        </p>
-        <p className="mt-3 font-semibold">– Franchise Partner</p>
-      </div>
-
-      {/* INVESTMENT */}
-      <div className="bg-gray-100 py-12 text-center px-4">
-        <h2 className="text-2xl font-bold">Investment & Setup</h2>
-
-        <div className="mt-6 inline-block bg-yellow-100 border border-yellow-300 px-6 py-6 rounded-xl shadow-sm">
-          <p className="text-gray-700">Affordable startup model</p>
-          <p className="mt-2 font-bold text-lg">₹3 Lakhs – ₹6 Lakhs</p>
-          <p className="mt-1 text-gray-600">
-            100–200 sq.ft space required
-          </p>
-        </div>
-      </div>
-
-      {/* FAQ */}
-      <div className="max-w-5xl mx-auto py-12 px-4">
-        <h2 className="text-2xl font-bold text-center mb-6">FAQs</h2>
-
-        <div className="space-y-4">
-          <div className="bg-white p-4 rounded-lg shadow">
-            <p className="font-semibold">Do I need experience?</p>
-            <p className="text-gray-600 text-sm">
-              No, we provide complete training and support.
-            </p>
-          </div>
-
-          <div className="bg-white p-4 rounded-lg shadow">
-            <p className="font-semibold">How long to start?</p>
-            <p className="text-gray-600 text-sm">
-              Usually within 2–4 weeks after approval.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      {/* CTA */}
-      <div className="py-12 text-center bg-gray-100">
-        <h2 className="text-lg font-semibold mb-4">
-          Ready to Start Your Business?
+      {/* FINAL CTA */}
+      <div className="bg-gradient-to-r from-red-500 to-red-600 text-white py-16 text-center px-4">
+        <h2 className="text-2xl md:text-3xl font-bold">
+          This Opportunity Won’t Wait Forever
         </h2>
 
+        <p className="mt-4 text-red-100 max-w-xl mx-auto">
+          Every day you delay, someone else takes your location. Start now and build your income stream.
+        </p>
+
         <a
-          href="https://wa.me/919347045830?text=Hello Shawarma Burst, I want to enquire about franchise"
+          href="https://wa.me/919353522108?text=Hello Shawarma Burst, I want franchise details"
           target="_blank"
           rel="noopener noreferrer"
-          className="bg-black text-white px-8 py-3 rounded-full hover:bg-gray-800 transition shadow-lg"
+          className="mt-6 inline-block bg-white text-red-500 px-8 py-3 rounded-full font-semibold hover:bg-gray-200 transition shadow-lg"
         >
-          Enquire on WhatsApp 💬
+          Enquire Now 💬
         </a>
       </div>
+
     </div>
   );
 }
